@@ -53,5 +53,6 @@
 
 ### ✅ IntelliJ Run with Coverage 사용 결과
   
-![image](https://github.com/user-attachments/assets/6ca40e84-bdeb-426f-ac33-a310b8aa07bd)
+![image](https://github.com/user-attachments/assets/97502c24-51f3-4377-940c-b875004ff886)
+
 ---
