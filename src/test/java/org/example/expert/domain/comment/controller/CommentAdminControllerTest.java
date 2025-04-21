@@ -46,4 +46,14 @@ class CommentAdminControllerTest {
                 .andExpect(status().isOk());
     }
 
+    @Test
+    @DisplayName("관리자 아님 - 댓글 삭제 실패")
+    void deleteCommentWithoutAdmin() throws Exception {
+        long commentId = 1L;
+        String token = jwtUtil.createToken(2L, "user@example.com", UserRole.USER);
+
+        mockMvc.perform(delete("/admin/comments/{commentId}", commentId)
+                        .header("Authorization", token))
+                .andExpect(status().isForbidden());
+    }
 }
